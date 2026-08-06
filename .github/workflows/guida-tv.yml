@@ -12,7 +12,7 @@ permissions:
 jobs:
   aggiorna:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
 
     steps:
       - name: Prendi il mio deposito
@@ -23,6 +23,11 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Prepara Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
       - name: Scarica il raccoglitore
         run: git clone --depth 1 https://github.com/iptv-org/epg.git raccoglitore
 
@@ -30,22 +35,31 @@ jobs:
         working-directory: raccoglitore
         run: npm install
 
-      - name: Raccogli la guida
+      - name: Raccogli il palinsesto completo
         working-directory: raccoglitore
-        run: npm run grab -- --channels=../italia.channels.xml --output=../guida.xml --maxConnections=5 --days=3
+        run: npm run grab --- --channels=../italia.channels.xml --output=../guida.xml --maxConnections=5 --days=3
 
-      - name: Controlla che il file non sia vuoto
+      - name: Controlla che il palinsesto non sia vuoto
         run: |
           if [ ! -s guida.xml ]; then
-            echo "Il file e' vuoto: qualcosa non ha funzionato."
+            echo "Il palinsesto e' vuoto: la raccolta non ha funzionato."
             exit 1
           fi
           echo "Programmi raccolti: $(grep -c '<programme' guida.xml)"
+
+      # Qui si tengono solo film e serie che hanno una scheda su TMDB.
+      # Tutto il resto - telegiornali, meteo, talk - viene scartato.
+      - name: Tieni solo film e serie
+        env:
+          TMDB_KEY: ${{ secrets.TMDB_KEY }}
+        run: python3 filtra.py
 
       - name: Salva il risultato
         run: |
           git config user.name "guida-tv"
           git config user.email "guida-tv@users.noreply.github.com"
-          git add guida.xml
+          # Il palinsesto grezzo non si conserva: pesa troppo e non serve.
+          rm -f guida.xml
+          git add guida-film-serie.json cache-titoli.json
           git diff --staged --quiet || git commit -m "Guida aggiornata"
           git push
