@@ -3,18 +3,61 @@
   <channel site="superguidatv.it" lang="it" xmltv_id="Rai1.it@SD" site_id="rai-1/217">Rai 1</channel>
   <channel site="superguidatv.it" lang="it" xmltv_id="Rai2.it@SD" site_id="rai-2/218">Rai 2</channel>
   <channel site="superguidatv.it" lang="it" xmltv_id="Rai3.it@HD" site_id="rai-3/219">Rai 3</channel>
-  <channel site="superguidatv.it" lang="it" xmltv_id="Rai4.it@SD" site_id="rai-4/220">Rai 4</channel>
-  <channel site="superguidatv.it" lang="it" xmltv_id="Rai5.it@SD" site_id="rai-5/221">Rai 5</channel>
-  <channel site="superguidatv.it" lang="it" xmltv_id="RaiMovie.it@SD" site_id="rai-movie/229">Rai Movie</channel>
-  <channel site="superguidatv.it" lang="it" xmltv_id="RaiPremium.it@SD" site_id="rai-premium/225">Rai Premium</channel>
   <channel site="superguidatv.it" lang="it" xmltv_id="Canale5.it@SD" site_id="canale-5/187">Canale 5</channel>
   <channel site="superguidatv.it" lang="it" xmltv_id="Italia1.it@SD" site_id="italia-1/188">Italia 1</channel>
   <channel site="superguidatv.it" lang="it" xmltv_id="Rete4.it@SD" site_id="rete-4/189">Rete 4</channel>
   <channel site="superguidatv.it" lang="it" xmltv_id="LA7.it@SD" site_id="la7/253">La7</channel>
   <channel site="superguidatv.it" lang="it" xmltv_id="TV8.it@SD" site_id="tv8/237">TV8</channel>
   <channel site="superguidatv.it" lang="it" xmltv_id="Nove.it@SD" site_id="nove/238">Nove</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Rai4.it@SD" site_id="rai-4/220">Rai 4</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Rai5.it@SD" site_id="rai-5/221">Rai 5</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="RaiMovie.it@SD" site_id="rai-movie/229">Rai Movie</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="RaiPremium.it@SD" site_id="rai-premium/225">Rai Premium</channel>
   <channel site="superguidatv.it" lang="it" xmltv_id="Iris.it@SD" site_id="iris/192">Iris</channel>
   <channel site="superguidatv.it" lang="it" xmltv_id="Cine34.it@SD" site_id="cine34/574">Cine34</channel>
   <channel site="superguidatv.it" lang="it" xmltv_id="20.it@SD" site_id="20/443">20</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Twentyseven.it@SD" site_id="twenty-seven/601">Twenty Seven</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="La5.it@SD" site_id="la-5/190">La 5</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Italia2.it@SD" site_id="italia-2/191">Italia 2</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="MediasetExtra.it@SD" site_id="mediaset-extra/194">Mediaset Extra</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Cielo.it@SD" site_id="cielo/239">Cielo</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="LA7d.it@SD" site_id="la7d/254">La7d</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="TopCrime.it@SD" site_id="top-crime/193">Top Crime</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Giallo.it@SD" site_id="giallo/244">Giallo</channel>
   <channel site="superguidatv.it" lang="it" xmltv_id="WarnerTV.it@SD" site_id="warner-tv/1344181813">Warner TV</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="ComedyCentral.it@SD" site_id="comedy-central/sky-intrattenimento/15">Comedy Central</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="PremiumCinema1.it@SD" site_id="premium-cinema-1/premium/445">Premium Cinema 1</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="PremiumCinema2.it@SD" site_id="premium-cinema-2/premium/447">Premium Cinema 2</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="PremiumCinema3.it@SD" site_id="premium-cinema-3/premium/448">Premium Cinema 3</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="PremiumCrime.it@SD" site_id="premium-crime/premium/202">Premium Crime</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="PremiumStories.it@SD" site_id="premium-stories/premium/204">Premium Stories</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="PremiumAction.it@SD" site_id="premium-action/premium/205">Premium Action</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="SkyCinemaUno.it@SD" site_id="sky-cinema-uno-hd/sky-cinema/75">Sky Cinema Uno HD</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="SkyCinemaDue.it@SD" site_id="sky-cinema-due-hd/sky-cinema/465">Sky Cinema Due HD</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="SkyCinemaCollection.it@SD" site_id="sky-cinema-collection-hd/sky-cinema/466">Sky Cinema Collection HD</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="SkyCinemaAction.it@SD" site_id="sky-cinema-action-hd/sky-cinema/467">Sky Cinema Action HD</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="SkyCinemaComedy.it@SD" site_id="sky-cinema-comedy-hd/sky-cinema/82">Sky Cinema Comedy HD</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="SkyCinemaDrama.it@SD" site_id="sky-cinema-drama-hd/sky-cinema/470">Sky Cinema Drama HD</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="SkyCinemaFamily.it@SD" site_id="sky-cinema-family-hd/sky-cinema/79">Sky Cinema Family HD</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="SkyCinemaRomance.it@SD" site_id="sky-cinema-romance-hd/sky-cinema/469">Sky Cinema Romance HD</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="SkyCinemaSuspense.it@SD" site_id="sky-cinema-suspense-hd/sky-cinema/468">Sky Cinema Suspense HD</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="SkySerie.it@SD" site_id="sky-serie-hd/sky-intrattenimento/591">Sky Serie HD</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="SkyAtlantic.it@SD" site_id="sky-atlantic-hd/sky-intrattenimento/3">Sky Atlantic HD</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="SkyInvestigation.it@SD" site_id="sky-investigation-hd/sky-intrattenimento/593">Sky Investigation HD</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="SkyUno.it@SD" site_id="sky-uno-hd/sky-intrattenimento/1">Sky Uno HD</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Fox.it@SD" site_id="fox-hd/sky-intrattenimento/4">Fox HD</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="CrimePlusInvestigation.it@SD" site_id="crime-inv/sky-intrattenimento/10">Crime+ Inv.</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Blaze.it@SD" site_id="blaze/sky-intrattenimento/429">Blaze</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Focus.it@SD" site_id="focus/249">Focus</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="RealTime.it@SD" site_id="real-time/255">Real Time</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="DMAX.it@SD" site_id="dmax/256">DMAX</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Boing.it@SD" site_id="boing/195">Boing</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="CartoonNetwork.it@SD" site_id="cartoon-network/sky-bambini/212">Cartoon Network</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Cartoonito.it@SD" site_id="cartoonito/196">Cartoonito</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="K2.it@SD" site_id="k2/245">K2</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Frisbee.it@SD" site_id="frisbee/246">Frisbee</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Super.it@SD" site_id="super/247">Super!</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="RaiGulp.it@SD" site_id="rai-gulp/228">Rai Gulp</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Nickelodeon.it@SD" site_id="nickelodeon/sky-bambini/133">Nickelodeon</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Boomerang.it@SD" site_id="boomerang/sky-bambini/137">Boomerang</channel>
 </channels>
