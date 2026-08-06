@@ -1,0 +1,51 @@
+name: Aggiorna guida TV
+
+# Ogni notte alle 4:10 italiane (3:10 UTC), piu' il pulsante per lanciarla a mano.
+on:
+  schedule:
+    - cron: '10 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Prendi il mio deposito
+        uses: actions/checkout@v4
+
+      - name: Prepara Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Scarica il raccoglitore
+        run: git clone --depth 1 https://github.com/iptv-org/epg.git raccoglitore
+
+      - name: Installa quello che serve
+        working-directory: raccoglitore
+        run: npm install
+
+      - name: Raccogli la guida
+        working-directory: raccoglitore
+        run: npm run grab --- --channels=../italia.channels.xml --output=../guida.xml --maxConnections=5 --days=3
+
+      - name: Controlla che il file non sia vuoto
+        run: |
+          if [ ! -s guida.xml ]; then
+            echo "Il file e' vuoto: qualcosa non ha funzionato."
+            exit 1
+          fi
+          echo "Programmi raccolti: $(grep -c '<programme' guida.xml)"
+
+      - name: Salva il risultato
+        run: |
+          git config user.name "guida-tv"
+          git config user.email "guida-tv@users.noreply.github.com"
+          git add guida.xml
+          git diff --staged --quiet || git commit -m "Guida aggiornata"
+          git push
