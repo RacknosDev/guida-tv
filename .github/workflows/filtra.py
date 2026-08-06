@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Tiene dal palinsesto soltanto film e serie che hanno una scheda su TMDB.
 Tutto il resto - telegiornali, meteo, talk, televendite - viene scartato.
@@ -26,8 +25,8 @@ GUIDA = 'guida.xml'
 CACHE = 'cache-titoli.json'
 USCITA = 'guida-film-serie.json'
 
-# Nomi che non sono mai film o serie. Serve a non sprecare ricerche: quello
-# che passa di qui viene comunque verificato su TMDB.
+
+
 SCARTA = [
     r'\btg\s?\d*\b', r'\btelegiornale\b', r'\bmeteo\b', r'\brassegna stampa\b',
     r'\bnews\b', r'\bnotizie\b', r'\bedicola\b', r'\bapprofondimento\b',
@@ -147,7 +146,7 @@ def main():
             continue
         cache[titolo] = chiedi_tmdb(titolo)
         cercati += 1
-        time.sleep(0.06)   # gentilezza verso TMDB
+        time.sleep(0.06)
         if cercati % 100 == 0:
             print('   cercati', cercati, '...')
             json.dump(cache, open(CACHE, 'w', encoding='utf-8'),
