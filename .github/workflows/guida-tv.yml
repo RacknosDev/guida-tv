@@ -37,7 +37,7 @@ jobs:
 
       - name: Raccogli il palinsesto completo
         working-directory: raccoglitore
-        run: npm run grab --- --channels=../italia.channels.xml --output=../guida.xml --maxConnections=5 --days=3
+        run: npm run grab -- --channels=../italia.channels.xml --output=../guida.xml --maxConnections=5 --days=3
 
       - name: Controlla che il palinsesto non sia vuoto
         run: |
