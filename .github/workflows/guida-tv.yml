@@ -1,5 +1,6 @@
 name: Aggiorna guida TV
 
+
 on:
   schedule:
     - cron: '10 3 * * *'
@@ -46,7 +47,8 @@ jobs:
           fi
           echo "Programmi raccolti: $(grep -c '<programme' guida.xml)"
 
-      
+
+
       - name: Tieni solo film e serie
         env:
           TMDB_KEY: ${{ secrets.TMDB_KEY }}
@@ -56,7 +58,7 @@ jobs:
         run: |
           git config user.name "guida-tv"
           git config user.email "guida-tv@users.noreply.github.com"
-          # Il palinsesto grezzo non si conserva: pesa troppo e non serve.
+
           rm -f guida.xml
           git add guida-film-serie.json cache-titoli.json
           git diff --staged --quiet || git commit -m "Guida aggiornata"
