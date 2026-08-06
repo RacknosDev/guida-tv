@@ -1,6 +1,5 @@
 name: Aggiorna guida TV
 
-# Ogni notte alle 4:10 italiane (3:10 UTC), piu' il pulsante per lanciarla a mano.
 on:
   schedule:
     - cron: '10 3 * * *'
@@ -47,8 +46,7 @@ jobs:
           fi
           echo "Programmi raccolti: $(grep -c '<programme' guida.xml)"
 
-      # Qui si tengono solo film e serie che hanno una scheda su TMDB.
-      # Tutto il resto - telegiornali, meteo, talk - viene scartato.
+      
       - name: Tieni solo film e serie
         env:
           TMDB_KEY: ${{ secrets.TMDB_KEY }}
