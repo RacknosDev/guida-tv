@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channels>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Rai1.it@SD" site_id="rai-1/217">Rai 1</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Rai2.it@SD" site_id="rai-2/218">Rai 2</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Rai3.it@HD" site_id="rai-3/219">Rai 3</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Rai4.it@SD" site_id="rai-4/220">Rai 4</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Rai5.it@SD" site_id="rai-5/221">Rai 5</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="RaiMovie.it@SD" site_id="rai-movie/229">Rai Movie</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="RaiPremium.it@SD" site_id="rai-premium/225">Rai Premium</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Canale5.it@SD" site_id="canale-5/187">Canale 5</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Italia1.it@SD" site_id="italia-1/188">Italia 1</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Rete4.it@SD" site_id="rete-4/189">Rete 4</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="LA7.it@SD" site_id="la7/253">La7</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="TV8.it@SD" site_id="tv8/237">TV8</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Nove.it@SD" site_id="nove/238">Nove</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Iris.it@SD" site_id="iris/192">Iris</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Cine34.it@SD" site_id="cine34/574">Cine34</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="20.it@SD" site_id="20/443">20</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="WarnerTV.it@SD" site_id="warner-tv/1344181813">Warner TV</channel>
+</channels>
