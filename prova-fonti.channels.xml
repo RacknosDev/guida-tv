@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channels>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Rai1.it@SD" site_id="rai-1/217">Rai 1</channel>
+  <channel site="superguidatv.it" lang="it" xmltv_id="Canale5.it@SD" site_id="canale-5/187">Canale 5</channel>
+  <channel site="guidatv.sky.it" lang="it" xmltv_id="Rai1.it@HD" site_id="DTH#899">Rai 1 HD</channel>
+  <channel site="guidatv.sky.it" lang="it" xmltv_id="Canale5.it@HD" site_id="DTH#10354">Canale 5 HD</channel>
+  <channel site="raiplay.it" lang="it" xmltv_id="Rai1.it@SD" site_id="rai-1">RAI 1</channel>
+  <channel site="raiplay.it" lang="it" xmltv_id="Rai2.it@SD" site_id="rai-2">RAI 2</channel>
+  <channel site="mediasetinfinity.mediaset.it" lang="it" xmltv_id="Canale5.it@SD" site_id="C5">Canale 5</channel>
+  <channel site="mediasetinfinity.mediaset.it" lang="it" xmltv_id="Italia1.it@SD" site_id="I1">Italia 1</channel>
+</channels>
