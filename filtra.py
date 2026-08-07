@@ -24,7 +24,7 @@ from datetime import datetime, timezone
 CHIAVE = os.environ.get('TMDB_KEY', '').strip()
 
 
-VERSIONE_REGOLE = 3
+VERSIONE_REGOLE = 4
 GUIDA = 'guida.xml'
 CACHE = 'cache-titoli.json'
 USCITA = 'guida-film-serie.json'
@@ -104,7 +104,7 @@ def chiedi_tmdb(titolo):
 
 
     parole = len(atteso.split())
-    soglia = 400 if parole <= 2 else 20
+    soglia = 100 if parole <= 2 else 15
 
 
 
@@ -206,9 +206,18 @@ def main():
     print('titoli nuovi:', nuovi, '- di cui cercati su TMDB:', cercati)
 
     tenuti = []
+    scartati_puntata = 0
     for g in grezzi:
         s = cache.get(g['titolo'])
         if not s:
+            continue
+
+
+
+
+
+        if g['ep'] and s['m'] == 'movie':
+            scartati_puntata += 1
             continue
         tenuti.append({
             'c': g['canale'], 'i': g['inizio'], 'f': g['fine'],
@@ -227,6 +236,7 @@ def main():
               ensure_ascii=False, separators=(',', ':'))
     json.dump(cache, open(CACHE, 'w', encoding='utf-8'), ensure_ascii=False)
 
+    print('puntate agganciate a un film, scartate:', scartati_puntata)
     film = sum(1 for t in tenuti if t['m'] == 'movie')
     print('TENUTI:', len(tenuti), 'programmi (' + str(film), 'film,',
           len(tenuti) - film, 'serie) su', len(risultato['canali']), 'canali')
