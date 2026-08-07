@@ -1,14 +1,14 @@
 
-"""
-Tiene dal palinsesto soltanto film e serie che hanno una scheda su TMDB.
-Tutto il resto - telegiornali, meteo, talk, televendite - viene scartato.
 
-Gira sul computer di GitHub, una volta a notte. L'app scarica solo il
-risultato, che e' piccolo e gia' pulito.
 
-I titoli gia' cercati vengono conservati in cache-titoli.json: la prima notte
-le ricerche sono molte, dalla seconda solo quelle nuove.
-"""
+
+
+
+
+
+
+
+
 
 import json
 import os
@@ -48,7 +48,7 @@ def senza_accenti(s):
 
 
 def norm(s):
-    """Forma confrontabile: niente accenti, niente punteggiatura, minuscolo."""
+
     s = senza_accenti(str(s or '')).lower()
     s = re.sub(r'^(il|lo|la|i|gli|le|l\'|un|uno|una|the|a|an)\s+', '', s)
     s = re.sub(r'[^a-z0-9 ]+', ' ', s)
@@ -84,9 +84,9 @@ def da_scartare(titolo):
 
 
 def chiedi_tmdb(titolo):
-    """Cerca il titolo su TMDB. Restituisce la scheda solo se il nome
-    corrisponde davvero: una somiglianza vaga produrrebbe accostamenti
-    sbagliati, ed e' meglio perdere un titolo che mostrarne uno errato."""
+
+
+
     url = ('https://api.themoviedb.org/3/search/multi?api_key=' + CHIAVE +
            '&language=it-IT&include_adult=false&query=' +
            urllib.parse.quote(titolo))
@@ -121,7 +121,7 @@ def chiedi_tmdb(titolo):
 
 
 def episodio_da(desc):
-    """La descrizione porta spesso "S6 Ep18": e' un indizio utile da mostrare."""
+
     m = re.search(r'\bS(\d+)\s*Ep?\.?\s*(\d+)', desc or '', re.I)
     return f'S{int(m.group(1))} Ep{int(m.group(2))}' if m else ''
 
