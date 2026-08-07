@@ -75,6 +75,13 @@ jobs:
           git config user.email "guida-tv@users.noreply.github.com"
 
           rm -f guida.xml
+
+
+
+
+
+          git fetch origin main
+          git reset --mixed origin/main
           git add guida-film-serie.json cache-titoli.json
           git diff --staged --quiet || git commit -m "Guida aggiornata"
-          git push
+          git push 
