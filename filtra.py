@@ -24,7 +24,7 @@ from datetime import datetime, timezone
 CHIAVE = os.environ.get('TMDB_KEY', '').strip()
 
 
-VERSIONE_REGOLE = 4
+VERSIONE_REGOLE = 5
 GUIDA = 'guida.xml'
 CACHE = 'cache-titoli.json'
 USCITA = 'guida-film-serie.json'
@@ -103,8 +103,6 @@ def chiedi_tmdb(titolo):
 
 
 
-    parole = len(atteso.split())
-    soglia = 100 if parole <= 2 else 15
 
 
 
@@ -121,10 +119,7 @@ def chiedi_tmdb(titolo):
                 v.get('original_title'), v.get('original_name')]
         if not any(norm(x) == atteso for x in nomi if x):
             continue
-        voti = v.get('vote_count') or 0
-        if voti < soglia:
-            continue
-        candidati.append((voti, v, tipo))
+        candidati.append((v.get('vote_count') or 0, v, tipo))
 
     if not candidati:
         return None
