@@ -1,0 +1,51 @@
+name: Prova fonti
+
+
+
+on:
+  workflow_dispatch:
+
+jobs:
+  prova:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+
+    steps:
+      - name: Prendi il mio deposito
+        uses: actions/checkout@v4
+
+      - name: Prepara Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Scarica il raccoglitore
+        run: git clone --depth 1 https://github.com/iptv-org/epg.git raccoglitore
+
+      - name: Installa quello che serve
+        working-directory: raccoglitore
+        run: npm install
+
+
+
+      - name: Interroga tutte le fonti
+        working-directory: raccoglitore
+        continue-on-error: true
+        run: npm run grab -- --channels=../prova-fonti.channels.xml --output=../prova.xml --maxConnections=1 --delay=500 --timeout=60000 --days=1
+
+      - name: Conta i programmi per fonte
+        run: |
+          echo "=============================="
+          echo "        ESITO DELLA PROVA"
+          echo "=============================="
+          if [ ! -s prova.xml ]; then
+            echo "Nessun file prodotto."
+            exit 0
+          fi
+          TOT=$(grep -c '<programme' prova.xml || true)
+          echo "Programmi totali raccolti: $TOT"
+          echo ""
+          echo "Per canale:"
+          grep -o 'channel="[^"]*"' prova.xml | sort | uniq -c | sort -rn || true
+          echo ""
+          echo "Se un canale non compare qui, la sua fonte non ha risposto."
